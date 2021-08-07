@@ -51,11 +51,14 @@ class UsersListView extends StatelessWidget {
         await fetch();
       },
       color: Theme.of(context).primaryColor,
-      child: Column(
+      child: ListView(
+        physics: BouncingScrollPhysics(),
+        shrinkWrap: true,
         children: [
           ListView.builder(
             shrinkWrap: true,
             itemCount: users.length,
+            physics: NeverScrollableScrollPhysics(),
             padding: EdgeInsets.all(20),
             itemBuilder: (context, index) {
               final user = users[index];
