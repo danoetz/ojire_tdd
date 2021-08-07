@@ -22,6 +22,7 @@ class UserPage extends GetView<UserController> {
         ),
       ).paddingAll(4.0),
       actions: [
+        widgets.RefreshIcon(controller: controller).paddingOnly(right: 10.0),
         widgets.ConnectivityIcon(controller: controller).paddingOnly(right: 10.0),
         widgets.ThemeIcon(controller: controller).paddingOnly(right: 10.0),
       ],

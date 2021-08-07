@@ -50,15 +50,9 @@ class UsersListView extends StatelessWidget {
       onRefresh: () async {
         await fetch();
       },
+      color: Theme.of(context).primaryColor,
       child: Column(
         children: [
-          IconButton(
-            padding: EdgeInsets.all(40),
-            icon: Icon(Icons.refresh),
-            onPressed: () async {
-              await fetch();
-            },
-          ),
           ListView.builder(
             shrinkWrap: true,
             itemCount: users.length,
